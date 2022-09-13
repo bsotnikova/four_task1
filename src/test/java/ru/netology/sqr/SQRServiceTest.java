@@ -23,10 +23,28 @@ class SQRServiceTest {
 
     @org.junit.jupiter.api.Test
     void purelyOutOfRange() {
-        int x = 200;
-        int y = 300;
-        int expected = 4;
+        int x = 10;
+        int y = 99;
+        int expected = 0;
         int actual = service.squares(x,y);
         assertEquals(expected, actual);
     }
+
+    @org.junit.jupiter.api.Test
+    void purelyWithinTheRangeTheBorder10() {
+        int x = 100;
+        int y = 101;
+        int expected = 1;
+        int actual = service.squares(x,y);
+        assertEquals(expected, actual);
+    }
+
+@org.junit.jupiter.api.Test
+    void purelyWithinTheRangeTheBorder99() {
+            int x = 9800;
+            int y = 9801;
+            int expected = 1;
+            int actual = service.squares(x,y);
+            assertEquals(expected, actual);
+            }
 }
