@@ -2,12 +2,14 @@ package ru.netology.sqr;
 
 public class SQRService {
     public int squares(int x, int y) {
-        int i = 0;
-        for (i = 10; i < 100; i++) {
+        int amount = 0;
+        for (int i = 10; i < 100; i++) {
             if (x <= i * i & i * i <= y) {
                 System.out.println(i);
+                amount = amount + 1;
             }
         }
-        return i;
+        System.out.println(amount);
+        return amount;
     }
 }
